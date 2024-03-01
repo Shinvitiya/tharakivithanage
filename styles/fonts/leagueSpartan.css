@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('./LeagueSpartan-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('./LeagueSpartan-Light.otf') format('opentype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('./LeagueSpartan-Regular.otf') format('opentype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('./LeagueSpartan-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('./LeagueSpartan-SemiBold.otf') format('opentype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('./LeagueSpartan-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('./LeagueSpartan-ExtraBold.otf') format('opentype');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: url('./LeagueSpartan-Black.otf') format('opentype');
+    font-weight: 900;
+}

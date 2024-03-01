@@ -1,0 +1,65 @@
+@import url("./fonts/leagueSpartan.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* ----------------Tailwind styles------------------------- */
+
+/* Headings */
+@layer utilities {
+    .heading-1{
+        @apply text-[56px] font-bold font-league-spartan 
+    }
+
+    .heading-2{
+        @apply text-5xl font-bold font-league-spartan 
+    }
+
+    .heading-3{
+        @apply text-[40px] font-bold font-league-spartan 
+    }
+
+    .heading-4{
+        @apply text-[32px] font-bold font-league-spartan
+    }
+
+    .heading-5{
+        @apply text-2xl font-bold font-league-spartan
+    }
+
+    .heading-6{
+        @apply text-xl font-bold font-league-spartan 
+    }
+
+/* Mobile Headings */
+    .mobile-heading-1{
+        @apply text-[40px] font-bold font-league-spartan 
+    }
+
+    .mobile-heading-2{
+        @apply text-4xl font-bold font-league-spartan 
+    }
+
+    .mobile-heading-3{
+        @apply text-[32px] font-bold font-league-spartan 
+    }
+
+    .mobile-heading-4{
+        @apply text-2xl font-bold font-league-spartan
+    }
+
+    .mobile-heading-5{
+        @apply text-xl font-bold font-league-spartan
+    }
+
+    .mobile-heading-6{
+        @apply text-lg font-bold font-league-spartan 
+    }
+
+   /* Center Items  */
+   .flex-center{
+    @apply flex items-center justify-center 
+    }
+}

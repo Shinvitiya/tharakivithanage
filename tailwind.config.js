@@ -7,10 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        "league-spartan": ["LeagueSpartan", "sans-serif"],
+      },
+      colors: {
+        "primary-gray": "#70727D",
+        "primary-white": "#F4F6F8",
+        "primary-purple": "#C499F3",
+        "primary-pink": "#BB9CC0",
+        "secondary-pink": "#FED9ED",
       },
     },
   },
