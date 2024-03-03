@@ -3,7 +3,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { urlFor } from '@/utilities/client';
-import { getContent, getDate } from '@/utilities';
+import { getContent, getDate, sideBarTabs } from '@/utilities';
+
+const createQuery = ()=>{
+    const tabs = sideBarTabs
+    .filter(tab => tab.tabName !== "trending")
+    .map(tab => tab.tabName);
+
+    const query = tabs.map(tabName => `...*[_type == "${tabName}" ] | order(_createdAt desc)[0]`).join(', ')
+    return query
+}
 
 const Banner = async () => {
     const posts = await getContent("entertainment")

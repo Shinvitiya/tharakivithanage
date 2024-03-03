@@ -1,10 +1,21 @@
 import React from 'react'
+import { notFound } from 'next/navigation'
 import { getDate } from '@/utilities'
 import { urlFor } from '@/utilities/client'
+import { client } from '@/utilities/client'
 
 export const revalidate = 10
 
-const PostPage = ({post}) => {
+const PostPage = async ({post}) => {
+    if (!post){
+        return notFound()
+    }
+    // Incrementing view count for blog post
+    const updatedViews = (post.views) + 1;
+    await client.patch(post._id)
+    .set({ views: updatedViews })
+    .commit();
+    // ---------------------------------------
   return (
     <React.Fragment>
         <div className='bg-primary-white col-span-3 mt-5 lg:pl-8 rounded-md space-y-5'>

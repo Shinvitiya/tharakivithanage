@@ -1,7 +1,7 @@
 import Banner from "@/components/Banner";
 import PostsCard from "@/components/PostCard";
 import Posts from "@/components/Posts";
-import Image from "next/image";
+import HighlightsCard from "@/components/HighlightsCard";
 
 import { entertainmentIcon, scienceIcon, technologyIcon } from "@/utilities";
 
@@ -33,10 +33,7 @@ export default function Home() {
       className=" bg-primary-gray"
       />
 
-      <Posts 
-        start={1}
-        end={7}
-      />
+      <Posts/>
 
       
     </div>

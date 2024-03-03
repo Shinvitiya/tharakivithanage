@@ -12,3 +12,12 @@ export const client = createClient({
 
 const builder = imageUrlBuilder(client);
 export const urlFor = (source) => builder.image(source)
+
+export const viewCounter = async (post) =>{
+  const updatedViews = (post.views) + 1;
+  await client.patch(post._id)
+  .set({ views: updatedViews })
+  .commit();
+
+  return(null)
+}

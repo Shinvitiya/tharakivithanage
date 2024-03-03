@@ -3,17 +3,33 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { client, urlFor } from '@/utilities/client';
-import { getDate } from '@/utilities';
+import { getDate, sideBarTabs } from '@/utilities';
+
+const createQuery = ()=>{
+    const tabs = sideBarTabs
+    .filter(tab => tab.tabName !== "trending")
+    .map(tab => tab.tabName);
+
+    const query = tabs.map(tabName => `...*[_type == "${tabName}" ] | order(_createdAt desc)[5..-1]`).join(', ')
+    return query
+}
 
 const getContent = async () =>{
-    const query = `*[_type in ["technology", "entertainment"]] | order(_createdAt desc)`;
+    // Gets posts from each category newest first without the first x number of posts and concatenates them into and reorders this newly concatenated array newest first
+
+    // Returns something like this while dynamically creating a query for each tab section you add
+    
+    // `[...*[_type == "technology" ] | order(_createdAt desc)[5..-1], ...*[_type == "science" ] | order(_createdAt desc)[5..-1], ...*[_type == "entertainment" ]| order(_createdAt desc)[5..-1]] | order(_createdAt desc)`;
+
+    const query = `[${createQuery()}] | order(_createdAt desc)` 
     const posts = await client.fetch(query)
     return posts
 }
 
-const Posts = async ({start, end}) => {
+const Posts = async () => {
+    createQuery()
   let posts = await getContent()
-  posts = posts.slice(start, end)
+
   return (
     <div className='grid sm:grid-cols-2 gap-4'>
         {posts.map((post, index)=>(
@@ -39,7 +55,7 @@ const Posts = async ({start, end}) => {
 
                     <div className='flex justify-between'>
                         <p  className='text-xs md:text-sm'> {getDate(post._createdAt)} </p>
-                        <p  className='text-xs md:text-sm uppercase text-primary-gray'> #{post._type} </p>
+                        <p  className='text-xs md:text-sm uppercase text-primary-gray' > #{post._type} </p>
                     </div>
                     
                 </div>
