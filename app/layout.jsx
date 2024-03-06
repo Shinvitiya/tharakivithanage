@@ -9,7 +9,7 @@ import HighlightsCard from "@/components/HighlightsCard";
 const mulish = Mulish({weight: ["200","300","400","500","700","800", "900", "1000"], subsets: ["latin"]})
 
 export const metadata = {
-  // metadataBase: new URL(''),
+  metadataBase: new URL('https://www.tharakivithanage.com'),
   title: { 
     default: "Blog",
     template: "%s | Blog"
