@@ -1,11 +1,10 @@
 import Banner from "@/components/Banner";
 import PostsCard from "@/components/PostCard";
 import Posts from "@/components/Posts";
-import HighlightsCard from "@/components/HighlightsCard";
 
 import { entertainmentIcon, scienceIcon, technologyIcon } from "@/utilities";
 
-export default function Home() {
+function Home() {
   return (
     <div className='col-span-3 mt-5  lg:pl-8 rounded-md space-y-8'>
       <Banner />
@@ -39,3 +38,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home
