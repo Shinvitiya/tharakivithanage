@@ -30,6 +30,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-3745059598599137"/>
+      </head>
       <body className={mulish.className}>
           {children}
       </body>
