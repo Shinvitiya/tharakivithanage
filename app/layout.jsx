@@ -1,10 +1,8 @@
 import { Mulish } from "next/font/google";
 import "../styles/globals.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import CookieBanner from "@/components/CookieBanner";
 
-import Navbar from "@/components/Navbar";
-import Sidebar from "@/components/Sidebar";
-import Footer from "@/components/Footer";
-import HighlightsCard from "@/components/HighlightsCard";
 
 const mulish = Mulish({weight: ["200","300","400","500","700","800", "900", "1000"], subsets: ["latin"]})
 
@@ -30,11 +28,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="google-adsense-account" content="ca-pub-3745059598599137"/>
-      </head>
+      <GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID}/>
       <body className={mulish.className}>
           {children}
+          <CookieBanner />
       </body>
     </html>
   );

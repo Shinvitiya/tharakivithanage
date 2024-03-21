@@ -11,15 +11,15 @@ const Sidebar = () => {
   return (
     <div className='h-screen bg-primary-purple/30 shadow-lg lg:flex flex-col items-center justify-start gap-10 relative hidden'>
 
-        <div className='mt-5 lg:flex hidden w-full px-3 items-center gap-4'>
+        <div className='mt-5 lg:flex hidden w-full px-2 items-center justify-center'>
           <Link href="/">
             <Image 
-              src="/logo.svg"
+              src="/logo.png"
               height={100}
               width={100}
               alt='logo'
               priority
-              className='pointer-events-none'
+              className='pointer-events-none w-32'
             />
           </Link>
           

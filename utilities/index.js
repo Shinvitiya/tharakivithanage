@@ -67,3 +67,9 @@ export const extractPathName = (pathname) =>{
   // Otherwise, return the first part
   return '/' + parts[1];
 }
+
+export const siteInfo = {
+  name: "Tharaki Vithanage",
+  email: "blog@email.com",
+  url: process.env.BASE_URL
+}

@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    h1{
+        @apply md:text-[56px] text-[40]  font-bold font-league-spartan 
+    }
+    h2,h3,h4,h5{
+        @apply md:text-[40px] text-[32px] font-bold font-league-spartan 
+    }
+    section {
+        @apply space-y-8
+    }
+
+    ul{
+        @apply list-disc space-y-2 py-2
+    }
+    ol{
+        @apply list-decimal space-y-2 py-2
+    }
+
+    .date{
+        @apply text-xs font-semibold
+    }
+
+}
