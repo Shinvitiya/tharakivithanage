@@ -69,7 +69,7 @@ const Carousel = ({posts}) => {
                     />   
                 </div>
 
-                <div className='px-3 py-3'>
+                <div className='px-3 py-3 md:h-[260px] flex flex-col justify-center'>
                     <h1 className='md:heading-1 mobile-heading-1 leading-tight uppercase'>
                         {latestPost.title}
                     </h1>

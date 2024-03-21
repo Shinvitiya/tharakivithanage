@@ -9,13 +9,13 @@ const mulish = Mulish({weight: ["200","300","400","500","700","800", "900", "100
 export const metadata = {
   metadataBase: new URL(process.env.BASE_URL),
   title: { 
-    default: "Blog",
+    default: "Viral Newsshare",
     template: "%s | Viral Newsshare"
   },
-  description: "Lorem Ipsum",
+  description: "Stay informed with Viral Newsshare - your ultimate destination for the latest breaking news, trending topics, and insightful stories.",
   openGraph: {
     title: "Viral Newsshare",
-    description: "Lorem Ipsum",
+    description: "Stay informed with Viral Newsshare - your ultimate destination for the latest breaking news, trending topics, and insightful stories.",
     images: "/opengraph.png",
     locale: 'en_US',
     type: 'website',

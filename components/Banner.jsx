@@ -2,8 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { urlFor, client } from '@/utilities/client';
-import { getDate, sideBarTabs } from '@/utilities';
+import { client } from '@/utilities/client';
+import { sideBarTabs } from '@/utilities';
 import Carousel from './Carousel';
 
 
@@ -26,8 +26,6 @@ const getContent = async () =>{
 const Banner = async () => {
 
     const posts = await getContent()
-    const latestPost = posts[1]
-    const imageUrl = urlFor(latestPost.imgUrl.asset._ref).url();
 
   return (
     <div className='w-full bg-primary-white shadow-2xl rounded-xl overflow-hidden'>
