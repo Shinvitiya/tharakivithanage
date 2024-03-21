@@ -7,7 +7,7 @@ import CookieBanner from "@/components/CookieBanner";
 const mulish = Mulish({weight: ["200","300","400","500","700","800", "900", "1000"], subsets: ["latin"]})
 
 export const metadata = {
-  metadataBase: new URL('https://www.tharakivithanage.com'),
+  metadataBase: new URL(process.env.BASE_URL),
   title: { 
     default: "Blog",
     template: "%s | Viral Newsshare"
