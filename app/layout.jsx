@@ -10,13 +10,13 @@ export const metadata = {
   metadataBase: new URL('https://www.tharakivithanage.com'),
   title: { 
     default: "Blog",
-    template: "%s | Blog"
+    template: "%s | Viral Newsshare"
   },
   description: "Lorem Ipsum",
   openGraph: {
-    title: "Blog",
+    title: "Viral Newsshare",
     description: "Lorem Ipsum",
-    images: "/opengraph-image.png",
+    images: "/opengraph.png",
     locale: 'en_US',
     type: 'website',
   },
