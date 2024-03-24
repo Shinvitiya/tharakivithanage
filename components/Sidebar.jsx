@@ -14,7 +14,7 @@ const Sidebar = () => {
         <div className='mt-5 lg:flex hidden w-full px-2 items-center justify-center'>
           <Link href="/">
             <Image 
-              src="/logo.png"
+              src="/logo.svg"
               height={100}
               width={100}
               alt='logo'

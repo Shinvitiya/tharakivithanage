@@ -19,7 +19,7 @@ const variants = {
     },
     exit : {
         x: -1000,
-        zIndex: 0,
+        zIndex: -2,
         opacity: 0,
       }
 };

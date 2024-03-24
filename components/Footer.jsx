@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className='lg:col-start-2 col-span-5 w-full bg-primary-white inset-0 flex md:flex-row flex-col  justify-between p-4 mt-5 bottom-0 shadow-inner gap-12'>
       <div className='w-full flex flex-col text-xs space-x-4'>
         <Image 
-            src="/logo.png"
+            src="/logo.svg"
             width={200}
             height={300}
           />
