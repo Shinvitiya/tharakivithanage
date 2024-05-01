@@ -4,6 +4,8 @@ import Posts from "@/components/Posts";
 
 import { businessIcon, cultureIcon, earthIcon, entertainmentIcon, newsIcon, scienceIcon, sportIcon, technologyIcon, travelIcon, weatherIcon } from "@/utilities";
 
+export const revalidate = 60
+
 function Home() {
   return (
     <div className='col-span-3 mt-5  lg:pl-8 rounded-md space-y-8'>

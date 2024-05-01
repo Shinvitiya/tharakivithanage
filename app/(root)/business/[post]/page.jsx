@@ -17,6 +17,7 @@ export async function generateMetadata({ params}) {
     },
   }
 }
+export const revalidate = 60
 
 const page = async({params}) => {
   const post = await getPost("business",params.post)

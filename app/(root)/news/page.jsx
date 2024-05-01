@@ -6,6 +6,8 @@ export const metadata = {
   title: "News"
 }
 
+export const revalidate = 60
+
 const page = async() => {
   return (
     <BlogSection category="news"/>

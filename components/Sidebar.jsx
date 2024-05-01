@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 const Sidebar = () => {
   const pathname = usePathname()
   return (
-    <div className='h-screen bg-primary-purple/30 shadow-lg lg:flex flex-col items-center justify-start gap-3 relative hidden'>
+    <div className='bg-primary-purple/30 shadow-lg lg:flex flex-col items-center justify-start gap-3 relative hidden'>
 
         <div className='lg:flex hidden w-full px-2 py-2 items-center justify-center'>
           <Link href="/">

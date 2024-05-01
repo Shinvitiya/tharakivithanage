@@ -3,6 +3,8 @@ import Sidebar from "@/components/Sidebar"
 import HighlightsCard from "@/components/HighlightsCard"
 import Footer from "@/components/Footer"
 
+export const revalidate = 60
+
 export default function RootLayout({children}){
   return (
         <>
