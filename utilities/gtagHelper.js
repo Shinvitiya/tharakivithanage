@@ -3,3 +3,4 @@ export const pageview = (GA_MEASUREMENT_ID, url) => {
         page_path: url,
     });
 };
+

@@ -4,13 +4,18 @@ import Image from 'next/image';
 
 import { urlFor } from '@/utilities/client';
 import { getContent, getDate} from '@/utilities';
+ 
+export const  revalidate = 60
 
 const PostsCard = async ({category, firstPost, lastPost, Icon, className}) => {
     
   let posts = await getContent(category)
   posts = posts.slice(firstPost,lastPost)
 
+  const contentAvailable = posts.length > 0 ? true : false;
+
   return (
+    contentAvailable && (
     <div className={`w-full shadow-xl rounded-xl py-4 px-4 ${className}`}>
         <div className='flex items-center py-3 gap-2 text-white'>
             {Icon}
@@ -46,8 +51,8 @@ const PostsCard = async ({category, firstPost, lastPost, Icon, className}) => {
                 </Link>
             ))}
         </div>
-
     </div>
+    )
 
   )
 }

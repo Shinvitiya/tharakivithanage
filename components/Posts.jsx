@@ -4,6 +4,7 @@ import { client } from '@/utilities/client';
 import { sideBarTabs } from '@/utilities';
 import PostsInfiniteScroll from './InfiniteScroll/PostsInfiniteScroll';
 
+export const revalidate = 60
 const createQuery = ()=>{
     const tabs = sideBarTabs
     .filter(tab => tab.tabName !== "trending")

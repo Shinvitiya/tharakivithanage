@@ -29,6 +29,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <GoogleAnalytics GA_MEASUREMENT_ID={process.env.GA_MEASUREMENT_ID}/>
+      <link
+          rel="canonical"
+          href={process.env.BASE_URL}
+          key="canonical"
+      />
       <body className={mulish.className}>
           {children}
           <CookieBanner />

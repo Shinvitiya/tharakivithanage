@@ -9,9 +9,9 @@ import { usePathname } from 'next/navigation';
 const Sidebar = () => {
   const pathname = usePathname()
   return (
-    <div className='h-screen bg-primary-purple/30 shadow-lg lg:flex flex-col items-center justify-start gap-10 relative hidden'>
+    <div className='h-screen bg-primary-purple/30 shadow-lg lg:flex flex-col items-center justify-start gap-3 relative hidden'>
 
-        <div className='mt-5 lg:flex hidden w-full px-2 items-center justify-center'>
+        <div className='lg:flex hidden w-full px-2 py-2 items-center justify-center'>
           <Link href="/">
             <Image 
               src="/logo.svg"
@@ -24,12 +24,12 @@ const Sidebar = () => {
           </Link>
           
         </div>
-        <div className='w-full gap-2 flex flex-col px-2'>
+        <div className='w-full flex flex-col px-2 gap-1'>
           {sideBarTabs.map((tab) =>{
 
             return (
             <Link 
-              className={`gap-2 px-2 py-3 flex items-center shadow-sm text-base uppercase text-primary-gray w-full rounded-md ${extractPathName(pathname) == tab.link? "bg-primary-pink text-primary-white": "hover:bg-primary-pink/30 hover:text-black"}`}
+              className={`gap-2 px-2 py-2 flex items-center shadow-sm text-base uppercase text-primary-gray w-full rounded-md ${extractPathName(pathname) == tab.link? "bg-primary-pink text-primary-white": "hover:bg-primary-pink/30 hover:text-black"}`}
               key={tab.tabName}
               href={tab.link}
               >

@@ -1,6 +1,8 @@
-import { MdScience, MdMovie, MdTrendingUp } from "react-icons/md";
+import { MdScience, MdMovie, MdTrendingUp, MdBusinessCenter, MdHandshake, MdNewspaper, MdCloudySnowing } from "react-icons/md";
+import { IoMdGlobe, IoMdFootball, IoMdAirplane, } from "react-icons/io";
 import { GiGearStickPattern } from "react-icons/gi";
 import { notFound } from "next/navigation";
+
 
 import { client} from "./client";
 
@@ -28,10 +30,18 @@ export const getDate = (date) =>{
   return (day)
 }
 
+export const businessIcon = <MdBusinessCenter />
+export const cultureIcon = <MdHandshake />
+export const earthIcon = <IoMdGlobe />
 export const entertainmentIcon = <MdMovie />
-export const trendingIcon = <MdTrendingUp />
+export const newsIcon = <MdNewspaper />
 export const scienceIcon = <MdScience />
+export const sportIcon = <IoMdFootball />
 export const technologyIcon = <GiGearStickPattern />
+export const travelIcon = <IoMdAirplane />
+export const weatherIcon = <MdCloudySnowing />
+export const trendingIcon = <MdTrendingUp />
+
 
 export const sideBarTabs =  [
   {
@@ -40,9 +50,39 @@ export const sideBarTabs =  [
     icon: trendingIcon
   },
   {
+    tabName: "business",
+    link: "/business",
+    icon: businessIcon
+  },
+  {
+    tabName: "culture",
+    link: "/culture",
+    icon: cultureIcon
+  },
+  {
+    tabName: "earth",
+    link: "/earth",
+    icon: earthIcon
+  },
+  {
+    tabName: "entertainment",
+    link: "/entertainment",
+    icon: entertainmentIcon
+  },
+  {
+    tabName: "news",
+    link: "/news",
+    icon: newsIcon
+  },
+  {
     tabName: "science",
     link: "/science",
     icon: scienceIcon
+  },
+  {
+    tabName: "sports",
+    link: "/sports",
+    icon: sportIcon
   },
   {
     tabName: "technology",
@@ -50,10 +90,15 @@ export const sideBarTabs =  [
     icon: technologyIcon
   },
   {
-    tabName: "entertainment",
-    link: "/entertainment",
-    icon: entertainmentIcon
-  },  
+    tabName: "travel",
+    link: "/travel",
+    icon: travelIcon
+  },
+  {
+    tabName: "weather",
+    link: "/weather",
+    icon: weatherIcon
+  }
 ]
 
 export const extractPathName = (pathname) =>{

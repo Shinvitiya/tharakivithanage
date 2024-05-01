@@ -24,7 +24,7 @@ const Footer = () => {
         <p>Your ultimate destination for the latest breaking news, trending topics, and insightful stories.</p>
       </div>
 
-      <div className='flex flex-col w-full space-y-1 justify-end'>
+      {/* <div className='flex flex-col w-full space-y-1 justify-end'>
         {sideBarTabs.map((tab, index) =>(
           <Link 
             href={tab.link} 
@@ -34,7 +34,7 @@ const Footer = () => {
               {tab.tabName}
             </Link>
         ))}
-      </div>
+      </div> */}
     </footer>
   )
 }

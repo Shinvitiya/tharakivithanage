@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className='w-full grid grid-cols-2 gap-3 py-3'>
           {sideBarTabs.map((tab) =>(
             <Link 
-              className='flex items-center uppercase font-poppins pl-6 rounded-md shadow-sm text-[16px] bg-secondary-white gap-2' 
+              className='flex items-center uppercase font-poppins pl-6 rounded-md shadow-sm text-sm bg-secondary-white gap-2' 
               href={tab.link}
               key={tab.tabName}
               onClick={()=>setMenu(false)}

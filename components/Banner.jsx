@@ -7,6 +7,7 @@ import { sideBarTabs } from '@/utilities';
 import Carousel from './Carousel';
 
 
+export const revalidate = 60
 
 const createQuery = ()=>{
     const tabs = sideBarTabs

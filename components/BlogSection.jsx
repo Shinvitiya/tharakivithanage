@@ -3,6 +3,7 @@ import React from 'react'
 import { getContent } from '@/utilities'
 import BlogSectionInfiniteScroll from './InfiniteScroll/BlogSectionInfiniteScroll'
 
+export const revalidate = 60
 const BlogSection = async({category}) => {
     const posts = await getContent(category)
     return (
@@ -12,5 +13,6 @@ const BlogSection = async({category}) => {
         </div>
       )
 }
+
 
 export default BlogSection
