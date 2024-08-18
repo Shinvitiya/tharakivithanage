@@ -23,13 +23,13 @@ export default function RootLayout({children}){
                 title="Popular"
                 titleClass="text-secondary-pink"
                 containerClass="bg-primary-purple"
-                query={`*[_type in ["technology", "entertainment", "science"] && defined(views)] | order(_createdAt desc) |order(views desc)[0...4]`}
+                query={`*[_type in ["business", "culture", "earth", "entertainment", "news", "science", "sports", "technology", "travel", "weather"] && defined(views)] | order(_createdAt desc) |order(views desc)[0...4]`}
               />
               <HighlightsCard 
                 title="Most Viewed"
                 titleClass="text-secondary-pink"
                 containerClass="bg-primary-pink"
-                query={`*[_type in ["technology", "entertainment", "science"] && defined(views)] | order(views desc)[0...4]`}
+                query={`*[_type in ["business", "culture", "earth", "entertainment", "news", "science", "sports", "technology", "travel", "weather"] && defined(views)] | order(views desc)[0...4]`}
               />
             </div>
 

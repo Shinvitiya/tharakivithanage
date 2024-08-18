@@ -10,7 +10,7 @@
 /* Headings */
 @layer utilities {
     .heading-1{
-        @apply text-[56px] font-bold font-league-spartan 
+        @apply text-[48px] font-bold font-league-spartan 
     }
 
     .heading-2{
